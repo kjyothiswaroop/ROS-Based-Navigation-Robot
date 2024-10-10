@@ -1,0 +1,30 @@
+<launch>
+  <!-- Include the rtabmap.launch file -->
+  <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+    <!-- Basic arguments -->
+    <arg name="frame_id"                value="base_link"/>
+    <arg name="subscribe_scan_cloud"    value="true"/>
+    <arg name="approx_sync"             value="true"/>
+
+    <!-- Topic remappings -->
+    <arg name="odom_topic"              value="/odometry/filtered"/>
+    <arg name="scan_cloud_topic"        value="/points"/>
+    <arg name="rgb_topic"               value="/realsense/color/image_raw"/>
+    <arg name="depth_topic"             value="/realsense/depth/image_rect_raw"/>
+    <arg name="camera_info_topic"       value="/realsense/color/camera_info"/>
+
+    <!-- RTAB-Map parameters -->
+    <arg name="rtabmap_args"            value="
+      --delete_db_on_start
+      --Reg/Strategy 1
+      --Reg/Force3DoF true
+      --RGBD/NeighborLinkRefining true
+      --RGBD/ProximityBySpace true
+      --RGBD/AngularUpdate 0.01
+      --RGBD/LinearUpdate 0.01
+      --RGBD/OptimizeFromGraphEnd false
+      --Grid/FromDepth false
+      --Mem/RehearsalSimilarity 0.45"
+    />
+  </include>
+</launch>
