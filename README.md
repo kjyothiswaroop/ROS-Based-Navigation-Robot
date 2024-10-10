@@ -22,9 +22,10 @@ $ sudo apt install ros-noetic-teb-local-planner
 ## Step 1: Setting up the environment
 1) Create a catkin workspace:
     ```
-    $ mkdir ~/catkin_ws/src
+    $ mkdir ~/catkin_ws/
     $ cd ~/catkin_ws/
-    $ catkin_init
+    $ mkdir src/
+    $ catkin_init_workspace
     
    ```
 2) Clone the repository :
