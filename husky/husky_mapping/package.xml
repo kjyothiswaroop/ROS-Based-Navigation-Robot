@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>husky_mapping</name>
+  <version>0.0.1</version>
+  <description>RtabMap-based mapping package for Husky robot</description>
+
+  <maintainer email="kjyothiswaroop00@gmail.com">Jyothi Swaroop</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>rtabmap_ros</depend>
+
+  <exec_depend>tf</exec_depend>
+
+  <export>
+  </export>
+</package>
