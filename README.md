@@ -32,7 +32,6 @@ $ sudo apt install ros-noetic-teb-local-planner
     $ cd ~/catkin_ws/src
     $ git clone https://github.com/kjyothiswaroop/ROS-Based-Navigation-Robot/
     $ mv husky/ rtabmap_ros/ ~/catkin_ws/src/
-    $ mv rtabmap.db ~/.ros/rtabmap.db (Optional)
     $ rm -rf ROS-Based-Navigation-Robot
      
    ```
@@ -86,7 +85,14 @@ At this point, you should be able to see the Robot with a Velodyne Lidar and RGB
 
 Once the mapping is done, close all the terminals opened till now.
 
-The map gets saved to the Rtabmap database located at ~/.ros/rtabmap.db. For running a demo, you can replace the rtabmap.db in this repository to ~/.ros/rtabmap.db in your system.
+The map gets saved to the Rtabmap database located at ~/.ros/rtabmap.db.
+This can be visualised using :
+```
+    $ cd ~/catkin_ws/
+    $ source devel/setup.bash
+    $ rtabmap-databaseViewer ~/.ros/rtabmap.db
+     
+```
 
 ## Step4 : Navigation 
 1) Execute the following in a new terminal :
