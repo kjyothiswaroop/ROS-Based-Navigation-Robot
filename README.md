@@ -1,9 +1,9 @@
 # ROS-Based-Navigation-Robot
 This repository aims to use an Autonomous Wheeled Robot equipped with 3D Lidar and a Camera to map the environment and navigate it while avoiding obstacles.
 
--> We use the Husky wheeled robot to achieve the same.
--> For mapping the environment we use the RtabMap package by using a Velodyne Lidar on the Husky Robot and an IntelRealsense RGB-D camera. 
--> For Path Planning and Navigation of the robot, we use the move_base with the Global Planner for path planning and the Teb Local Planner for local path and dynamic obstacle avoidance
+- We use the Husky wheeled robot to achieve the same.
+- For mapping the environment we use the RtabMap package by using a Velodyne Lidar on the Husky Robot and an IntelRealsense RGB-D camera. 
+- For Path Planning and Navigation of the robot, we use the move_base with the Global Planner for path planning and the Teb Local Planner for local path and dynamic obstacle avoidance
 
 ## Pre-requisites:
 1) Ubuntu 20.04
